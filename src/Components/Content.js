@@ -15,7 +15,9 @@ class Content extends React.Component {
   render() {
     return (
       <div className="Content" >
-        <Page title='Spacestagram' fullWidth='true'/>
+        <div style={{margin: "0 20%"}}>
+          <Page title='Spacestagram' fullWidth='true'/>
+        </div>
         <ContentCard/>
         <br></br>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>

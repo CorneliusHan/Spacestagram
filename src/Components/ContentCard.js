@@ -6,7 +6,7 @@ import ReactPlayer from 'react-player'
 import { todayDate } from "../Util/DateUtil"
 import { getPictureByDate, getPictureByDefault, getPictureBySurprise} from "../Util/NASA_API";
 import { ACTION_CONSTANT } from '../Util/ActionConstants';
-import  { MediaCard, Icon, Modal, Stack, TextField, TextContainer } from '@shopify/polaris';
+import  { MediaCard, Icon, Modal, Stack, TextField, TextContainer, Page } from '@shopify/polaris';
 import { HeartMajor, CalendarMajor, ShareMinor, DuplicateMinor } from '@shopify/polaris-icons';
 import Calendar from 'react-calendar';
 import BLACK from "../Asstes/Black.jpeg"
@@ -131,6 +131,7 @@ export default function ContentCard() {
           setImage(result.data);
           // stop the loading animation
           setLoading(false);
+          setLiked(false);
         }).catch((error) => {
           let errorImage = {
             explanation: error.msg,
