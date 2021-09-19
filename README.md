@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# Spacestagram
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Project Link: https://spacestagram-peterhan.netlify.app/ <br/>
+Project Requirement: https://docs.google.com/document/d/1QlC6htA5SXEl3YruAOkJWj2-0W3w-n0UOzGuJ1EcktQ/edit#
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+### Basic Functionality
 
-### `yarn start`
+* Get iamge of the day from NASA Open API\
+* Display the image/video of the day, title, date and description\
+* Like/Unlike button
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Extras
 
-### `yarn test`
+#### Get Image by day
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* The "Pick a Date" button at the bottom of the content card allows user to select photo from previous date
+* An blackhole image will show up if a future date is selected
 
-### `yarn build`
+#### I'm Feeling Lucky
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Idea taken from Google's I'm feeling lucky
+* When the "I'm Feeling Lucky" button at the bottom of the page is clicked, a photo from a randomly selected date will be dispalyed
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Share the Image
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* The share icon on the right of the "Like" button can be click to bring up a popup window
+* A shareable link of the image will be provided and copy to the clipboard by clicking the "Copy Link" button
 
-### `yarn eject`
+#### A Spotify Playlist
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* Integrated a Spotify component at the end of the page. Who doesn't like listening of Sir Elton John while looking at the wonders of the universe?
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### A Rocket Spinner for Loading
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+* Added a Roacker Loading Spinner to display while waiting for the API call to return
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### Double Click the Image or Video to like
 
-## Learn More
+* You can double click the Image or Video to like, just like Instagram
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### CI/CD
+* This app is deployed via Netlify.
 
-### Code Splitting
+## Run the App Locally
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+npm run start
+```
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Open http://localhost:3000/ to view it.
