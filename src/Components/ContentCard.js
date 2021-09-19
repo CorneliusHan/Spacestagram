@@ -187,9 +187,10 @@ export default function ContentCard() {
             height="100%"
             style={{objectFit: 'fill', textAlign: 'center', zIndex: 0}}
             src={nasa_image.hdurl}
+            onDoubleClick={handleLikeClick}
           /> :
           <ReactPlayer ralt="Video playing" url={nasa_image.url} playing controls={true} width="100%"
-          style={{objectFit: 'cover', width:"100%"}}/>
+          style={{objectFit: 'cover', width:"100%"}} onDoubleClick={handleLikeClick} />
           }
 
           <div style={{ zIndex: 1, }}>
@@ -198,7 +199,7 @@ export default function ContentCard() {
               {liked? "Liked" : "Like"}
             </Button>
             <Button onClick={handleSharePopupOpen} alt = "Share Button">
-              <Icon source={ShareMinor}/>
+              <Icon source={ShareMinor} color="base"/>
               Share
             </Button>
           </div>
