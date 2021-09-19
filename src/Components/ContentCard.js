@@ -116,7 +116,6 @@ export default function ContentCard() {
     // start the loading animation
     setLoading(true);
     // reset the current image variable
-
     setImage(loadingImage);
     switch ( action ){
       case ACTION_CONSTANT.DEFAULT:
@@ -124,10 +123,10 @@ export default function ContentCard() {
           setImage(result.data);
           // stop the loading animation
           setLoading(false);
+          setLiked(false);
         });
         break;
       case ACTION_CONSTANT.DATE:
-        //"2013-02-04"
         getPictureByDate(selectedDate).then((result) => {
           setImage(result.data);
           // stop the loading animation
@@ -142,6 +141,7 @@ export default function ContentCard() {
           }
           setImage(errorImage);
           setLoading(false);
+          setLiked(false);
         });
         break;
       case ACTION_CONSTANT.SURPRISE:
@@ -149,7 +149,7 @@ export default function ContentCard() {
           setImage(result.data[0]);
           // stop the loading animation
           setLoading(false);
-          console.log(result.data[0]);
+          setLiked(false);
         });
         break;
       }
